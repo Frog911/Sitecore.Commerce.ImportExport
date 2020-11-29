@@ -1,0 +1,14 @@
+<div class="form-group">
+  <div [ngSwitch]="status">
+    <div *ngSwitchCase="statusType.Running">
+      <div class="alert alert-info">{{params.RunningMessage}}</div>
+      <sc-progress-indicator-panel [show]="true" [hideBackground]="false"></sc-progress-indicator-panel>
+    </div>
+    <div *ngSwitchCase="statusType.Success">
+        <div class="alert alert-success">{{params.SuccessMessage}}</div>
+    </div>
+    <div *ngSwitchCase="statusType.Error">
+        <div class="alert alert-error">{{params.ErrorMessage}}</div>
+    </div>
+  </div>
+</div>

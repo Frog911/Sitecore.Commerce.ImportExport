@@ -1,0 +1,64 @@
+@import "../../../../node_modules/bootstrap/scss/_functions.scss";
+@import "../../../../node_modules/bootstrap/scss/_mixins.scss";
+@import "../../../../node_modules/bootstrap/scss/_variables.scss";
+
+$icomoon-font-path: "../../../../node_modules/@speak/icon-fonts/dist/fonts/";
+@import "../../../../node_modules/@speak/icon-fonts/src/SitecoreIcons/style.scss";
+@import "../../../../node_modules/@speak/styling/src/utils/colors/_colors.scss";
+@import "../../../../node_modules/@speak/styling/src/_custom.scss";
+
+.tile {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  margin-top: $spacer;
+  padding: $spacer $spacer 0 $spacer;
+  flex: 0 0 100%;
+
+  &:nth-child(1) {
+    margin-top: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    flex: 0 0 50%;
+
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+
+    &:nth-of-type(odd) {
+      flex: 0 0 calc(50% - #{$spacer});
+      margin-right: $spacer;
+    }
+  }
+
+  &.selectable {
+    cursor: pointer;
+  }
+
+  &.active {
+    background-color: $table-active-bg;
+  }
+
+  .tile-icon {
+    flex: 0;
+    margin-right: $spacer;
+  }
+
+  .tile-description {
+    align-content: flex-start;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+
+    .tile-description-item {
+      flex: 0 0 50%;
+      width: 50%;
+    }
+  }
+
+  ::ng-deep .property {
+    margin: 2px 15px 15px 0;
+  }
+}
+

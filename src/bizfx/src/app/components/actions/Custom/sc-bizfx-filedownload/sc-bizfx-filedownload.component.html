@@ -1,0 +1,6 @@
+<ng-container *ngIf="showRibbon">
+        <sc-progress-indicator-panel [show]="downloading" [hideBackground]="false"></sc-progress-indicator-panel>
+</ng-container>
+<button class="btn btn-icon-only btn-secondary" title="Download" (click)="download($event)">
+        <sc-icon size="small" color="basic-x-dark" [icon]="'download'"></sc-icon>
+</button>

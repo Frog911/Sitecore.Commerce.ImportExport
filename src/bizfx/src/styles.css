@@ -1,0 +1,14 @@
+div.ngb-dp-day .btn-light {
+    padding: 0.185rem 0.25rem;
+    display: inline-block;
+    box-shadow: none;
+}
+.ngb-dp-day:hover, .ngb-dp-day.focused {
+    background-color: #e6e6e6;
+}
+.ngb-dp-weekday {
+    color: #6ac0e2!important;
+}
+.ngb-dp-arrow-btn{
+    min-width: 0px;
+}

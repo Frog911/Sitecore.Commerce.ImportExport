@@ -1,0 +1,16 @@
+<div class="autocomplete">
+  <div class="autocomplete-input">    
+    <input class="search-input" #searchBox id="search-box" [(ngModel)]="selectedItem.id" (keyup)="search(searchBox.value)" autocomplete="off" />
+  </div>
+  <div class="autocomplete-result" *ngIf="noResultsFound">
+    <span class="result-item">{{ 'NoSearchResults' | translate }}</span>
+  </div>
+  <div class="autocomplete-result" *ngIf="searching">
+    <span class='result-item'>{{ 'Searching' | translate }}</span>
+  </div>
+  <div class="autocomplete-result" id="autocomplete-result">
+    <div class="result-item" *ngFor="let result of formattedResults" (click)="selected(result)" id="result-{{result.id}}" > 
+        {{result.title}}
+    </div>
+  </div>
+</div>

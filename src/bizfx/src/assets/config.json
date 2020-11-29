@@ -1,0 +1,12 @@
+{
+  "EnvironmentName": "HabitatAuthoring",
+  "EngineUri": "https://commerceauthoring.sc9.com",
+  "IdentityServerUri": "https://XP0.IdentityServer",
+  "BizFxUri": "http://localhost:4200/",
+  "Language": "en",
+  "Currency": "USD",
+  "ShopName": "CommerceEngineDefaultStorefront",
+  "LanguageCookieName": "selectedLanguage",
+  "EnvironmentCookieName": "selectedEnvironment",
+  "AutoCompleteTimeout_ms": 300
+}
